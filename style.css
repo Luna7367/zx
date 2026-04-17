@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Main body */
+body{
+    font-family: 'outfit', sans-serif;
+    background: linear-gradient(180deg, #8D6E63, #6D4C41);
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    color: #D7CCC8;
+    padding: 20px;
+    background: linear-gradient(90deg, #3E2723, #5D4037);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-brand{
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 999px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.info-and-image{
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.main-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contact Form */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-title h1{
+    font-weight: 600;
+    color: #d32d0f;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-title hr{
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6d53, #db3a1a);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-inputs{
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'outfit', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.user-inputs:focus{
+    outline: none;
+    border-color: #d32d0f;
+    box-shadow: 0 0 10px rgba(211, 45, 15, 0.2);
+}
+
+.user-inputs.textarea{
+    resize: vertical;
+    min-height: 120px;
+    font-size: 16px;
+}
+
+.submit-button{
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff6d53, #db3a1a);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(211, 45, 15, 0.3);
+}
+
+.submit-button:active{
+    transform: translateY(0);
+}
+
+/* Contact Info */
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card{
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover{
+    transform: translateY(-5px);
+}
+
+.info-card h3{
+    color: #d32d0f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-card p{
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.coffee-image{
+    width: 400px;
+    height: 400px;
+    gap: 300px;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+/* Mobile responsiveness for both Phones and Tablets depending on the detected pixel size of the device */
+/* Mobile responsive design - Tablets */
+@media (max-width: 768px){
+    .main-container{
+        grid-template-columns: 1fr;
+        gap: 30px;
+        min-height: auto;
+        padding: 20px 0;
+    }
+    .contact-form{
+        padding: 30px 20px;
+    }
+    .contact-title h1{
+        font-size: 28px;
+    }
+    .info-and-image{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .contact-info{
+        gap: 15px;
+    }
+    .info-card{
+        padding: 20px;
+    }
+    .info-card h3{
+        font-size: 18px;
+    }
+    .info-card p{
+        font-size: 14px;
+    }
+    .coffee-image{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* Mobile responsive design - Phones */
+@media (max-width: 480px){
+    body{
+        padding-top: 90px;
+    }
+    .top-bar{
+        padding: 12px 10px;
+    }
+    .nav-brand{
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+    .nav-links{
+        gap: 8px;
+        flex-direction: column;
+    }
+    .nav-links a{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .main-container{
+        gap: 20px;
+        padding: 0;
+    }
+    .contact-form{
+        padding: 20px;
+        gap: 15px;
+        border-radius: 15px;
+    }
+    .contact-title h1{
+        font-size: 24px;
+    }
+    .contact-title hr{
+        height: 2px;
+    }
+    .user-inputs{
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .submit-button{
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    .info-and-image{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .coffee-image{
+        width: 100%;
+        max-width: 250px;
+        height: auto
+    }
+}
